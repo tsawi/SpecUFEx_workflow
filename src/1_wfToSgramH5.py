@@ -2,7 +2,7 @@
 
 import pandas as pd
 import numpy as np
-import os 
+import os
 import glob
 import obspy
 import specufex
@@ -13,11 +13,6 @@ from tqdm import trange
 from f1_spectrogram_functions import wf_to_H5, gen_sgram_QC_noAlias
 
 
-## change this to input arg
-yamlPath = "/Users/theresasawi/Documents/11_Manuscripts/Methods_Paper/data/yaml/demo.yaml"
-
-
-
 
 ####################################################################################
 ####################################################################################
@@ -26,6 +21,14 @@ yamlPath = "/Users/theresasawi/Documents/11_Manuscripts/Methods_Paper/data/yaml/
 ###
 ####################################################################################
 ####################################################################################
+
+# Check if a command line argument is provided
+if len(sys.argv) < 2:
+    print("Please provide .yaml path")
+else:
+    # The first command line argument is at index 1 (index 0 is the script name)
+    yamlPath = sys.argv[1]
+    print("Entered value:", entered_value)
 
 
 

@@ -2,18 +2,13 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.colors import ListedColormap
-import os 
+import os
 import h5py
 import yaml
 import tqdm
 
 
 from f2_cluster_functions import linearizeFP, PVEofPCA, calcSilhScore,calcSilhScoreHierarch, getTopFCatProp, getWF, getFP, getSgram, calcFFT
-
-
-yamlPath = "/Users/theresasawi/Documents/11_Manuscripts/Methods_Paper/data/yaml/demo.yaml"
-
-
 
 
 
@@ -25,6 +20,14 @@ yamlPath = "/Users/theresasawi/Documents/11_Manuscripts/Methods_Paper/data/yaml/
 ###
 ####################################################################################
 ####################################################################################
+
+# Check if a command line argument is provided
+if len(sys.argv) < 2:
+    print("Please provide .yaml path")
+else:
+    # The first command line argument is at index 1 (index 0 is the script name)
+    yamlPath = sys.argv[1]
+    print("Entered value:", entered_value)
 
 
 

@@ -1,13 +1,11 @@
 import specufex
-import os 
+import os
 import obspy
 from specufex import BayesianNonparametricNMF
 import h5py
 import yaml
 import numpy as np
 from tqdm import trange
-## change this to input arg
-yamlPath = "/Users/theresasawi/Documents/11_Manuscripts/Methods_Paper/data/yaml/demo.yaml"
 
 
 
@@ -20,7 +18,13 @@ yamlPath = "/Users/theresasawi/Documents/11_Manuscripts/Methods_Paper/data/yaml/
 ####################################################################################
 ####################################################################################
 
-
+# Check if a command line argument is provided
+if len(sys.argv) < 2:
+    print("Please provide .yaml path")
+else:
+    # The first command line argument is at index 1 (index 0 is the script name)
+    yamlPath = sys.argv[1]
+    print("Entered value:", entered_value)
 
 with open(yamlPath) as stream:
     config = yaml.safe_load(stream)
