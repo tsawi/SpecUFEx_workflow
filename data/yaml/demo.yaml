@@ -1,0 +1,43 @@
+---
+# Paths
+paths:
+      key: "demo" # for filenames mainly now.
+      projectPath: "/Users/theresasawi/Documents/11_Manuscripts/Methods_Paper/" # path to the main project directory
+      waveformPath: "/Users/theresasawi/Documents/11_Manuscripts/Methods_Paper/data/raw_waveforms/"
+      h5name: "demo.h5" # if we want it to be different from the key !
+
+
+# Spectrogram parameters
+sgramParams:
+      sgramType: "spectrogram"
+      fmin: 1 # minimum frequency in the spectrogram
+      fmax: 30 # maximum frequency in the spectrogram
+      winLen_Sec:  .5 # window length in seconds
+      fracOverlap: .99 # MAXIMUM ALLOWED
+      nfft: 2048  # padding #
+
+
+# SpecUFEx parameters
+specufexParams:
+      N_patterns_NMF: 75 # initiate NMF with this many N_patterns (max, then shrinks)
+      nmf_batchsz: 1 # batch size for nmf fit
+      nmf_nbatch: 100000 # number of batches
+      N_states_HMM: 15 # number of states for HMM (fixed at this value)
+      hmm_batchsz: 1 #batch size for hmm fit
+      hmm_nbatch: 5000 # number of batches
+
+
+# Clustering parameters
+clusterParams:
+      clusterOn: "PCA" # options: 'PCA', 'fingerprints'
+      PVE: .85 # Proportion variance explained to determine number of PCs
+      method: "kmeans" # options: 'kmeans', 'hierarchical'
+      minK: 2 # batch size for nmf fit
+      maxK: 10 # number of batches
+      # Under sconstruction: metric: "SilhScore" # options: "SilhScore", "Euclidean"
+      numEx: 5 # Number of "best clustered" examples to highlight, based on chosen metric
+      standardScaler: 'None' # options: 'MinMax' 'None' 'StandardScaler'
+
+
+
+... # three dots ends the yaml file
