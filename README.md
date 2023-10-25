@@ -6,12 +6,32 @@ For more detailed information about the SpecUFEx algorithm, you can visit the [S
 
 ## Workflow Steps
 
-1. Create a New YAML File:
+
+conda env create -f env.yaml
+
+1. Set up environment
+  - Clone this github repository by running the following command in Terminal:
+  ```
+  git clone https://github.com/tsawi/SpecUFEx_workflow.git
+  ```
+  - Navigate to the main `SpecUFEx_workflow/` folder
+  - Follow SpecUFEx installation instructions at the [SpecUFEx GitHub repository](https://github.com/SpecUFex)
+  - Set up conda environment by running the following command in Terminal:
+  ```
+  conda env create -f env.yaml
+  ```
+
+2. Create a New YAML File:
    - Create a new `.yaml` file in the `data/yaml` directory.
    - Set the required parameters in this YAML file according to your experiment.
 
-2. Run Python Scripts:
-   - Run the provided Python scripts in the `src/` directory in a specific order.
+3. Run Python Scripts:
+
+   - Interact with the Jupyter notebooks in `tutorial/`
+
+   OR
+
+   - Run the provided Python scripts in the `src/` directory in the order.
    - Start with `1_wfToSgramH5.py`, followed by `2_SpecUFEx.py`, and finally `3_Clustering.py`.
    - Provide the path to the previously created `.yaml` file as an argument.
    - For example:
@@ -19,10 +39,11 @@ For more detailed information about the SpecUFEx algorithm, you can visit the [S
      python3 1_wfToSgramH5.py ../data/yaml/demo/yaml
      ```
 
-3. Save Figures:
+
+4. Save Figures:
    - The resulting figures are automatically saved in the `reports/figures` directory.
 
-4. Experiment Adjustment:
+5. Experiment Adjustment:
    - If needed, adjust the parameters in the `.yaml` file to set up a new experiment.
    - After making changes, save the `.yaml` file.
    - Repeat the steps 2 and 3 to run and visualize the results of the new experiment.
