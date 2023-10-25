@@ -1,0 +1,11 @@
+name: specufex  # You can change the environment name as desired
+channels:
+  - conda-forge  # You can add more channels as needed
+dependencies:
+  - pandas
+  - numpy
+  - obspy
+  - h5py
+  - pyyaml
+  - matplotlib
+  - scikit-learn
