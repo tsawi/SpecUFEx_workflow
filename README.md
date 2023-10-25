@@ -10,16 +10,16 @@ For more detailed information about the SpecUFEx algorithm, you can visit the [S
 conda env create -f env.yaml
 
 1. Set up environment
-  - Clone this github repository by running the following command in Terminal:
-  ```
-  git clone https://github.com/tsawi/SpecUFEx_workflow.git
-  ```
-  - Navigate to the main `SpecUFEx_workflow/` folder
-  - Follow SpecUFEx installation instructions at the [SpecUFEx GitHub repository](https://github.com/SpecUFex)
-  - Set up conda environment by running the following command in Terminal:
-  ```
-  conda env create -f env.yaml
-  ```
+    - Clone this github repository by running the following command in Terminal:
+    ```
+    git clone https://github.com/tsawi/SpecUFEx_workflow.git
+    ```
+   - Navigate to the main `SpecUFEx_workflow/` folder
+   - Follow SpecUFEx installation instructions at the [SpecUFEx GitHub repository](https://github.com/SpecUFex)
+   - Set up conda environment by running the following command in Terminal:
+    ```
+    conda env create -f env.yaml
+    ```
 
 2. Create a New YAML File:
    - Create a new `.yaml` file in the `data/yaml` directory.
