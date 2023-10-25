@@ -1,10 +1,10 @@
 ---
 # Paths
 paths:
-      key: "demo" # for filenames
-      projectPath: "/path/to/project/folder/" #
-      waveformPath: "/path/to/waveforms/" #
-      h5name: "demo.h5" # if we want it to be different from the key !
+      key: "demo_150Hz_v3" # for filenames mainly now.
+      projectPath: "/Users/theresasawi/Documents/11_Manuscripts/Methods_Paper/" # path to the main project directory
+      waveformPath: "/Users/theresasawi/Documents/12_Projects/specufex_tutorial/data/Geysers_WF/" # "/Users/theresasawi/Documents/11_Manuscripts/Methods_Paper/data/raw_waveforms/"
+      h5name: "demo_150Hz_v3.h5" # if we want it to be different from the key !
 
 
 # Spectrogram parameters
@@ -15,7 +15,7 @@ sgramParams:
       winLen_Sec:  .5 # window length in seconds
       fracOverlap: .25 # MAXIMUM ALLOWED
       nfft: 2048  # padding #
-      decimation_factor: 5 #decimate spectrogram
+      decimation_factor: 5
 
 
 
